@@ -1,0 +1,43 @@
+﻿<Properties StartupConfiguration="{005FC148-3C66-4B95-AA07-021BAEF81263}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.FiorelloBackend PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FiorelloBackend/Areas/Admin/Views/Account/Index.cshtml">
+    <Files>
+      <File FileName="FiorelloBackend/Areas/Admin/Views/Account/AddRoleToUser.cshtml" Line="20" Column="22" />
+      <File FileName="FiorelloBackend/Areas/Admin/Views/Account/Index.cshtml" Line="52" Column="73" />
+      <File FileName="FiorelloBackend/Areas/Admin/Controllers/AccountController.cs" Line="74" Column="44" />
+      <File FileName="FiorelloBackend/Areas/Admin/ViewModels/Account/UserVM.cs" Line="10" Column="33" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FiorelloBackend" expanded="True">
+            <Node name="FiorelloBackend">
+              <Node name="Areas">
+                <Node name="Admin">
+                  <Node name="Controllers" expanded="True" />
+                  <Node name="ViewModels" expanded="True">
+                    <Node name="Account" expanded="True" />
+                  </Node>
+                  <Node name="Views" expanded="True">
+                    <Node name="Account" expanded="True">
+                      <Node name="Index.cshtml" selected="True" />
+                    </Node>
+                    <Node name="Shared" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

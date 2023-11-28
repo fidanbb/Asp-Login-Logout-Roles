@@ -1,0 +1,90 @@
+﻿@model RegisterVM
+
+@{
+    ViewData["Title"] = "Resgister";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: #f2f2f2;
+    }
+
+    .container-register {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+        margin: 0 auto;
+        width: 350px;
+    }
+
+    .registration-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        margin-top: 10px;
+    }
+
+    input {
+        padding: 6px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #45a049;
+        }
+</style>
+
+<div class="container-register mb-5">
+    <h2>User Registration</h2>
+    <form class="registration-form" method="post" asp-controller="Account" asp-action="Register">
+        <div style="color:red;" asp-validation-summary="All"></div>
+        <label asp-for="FullName">FullName</label>
+        <input asp-for="FullName">
+        <span style="color:red;" asp-validation-for="FullName"></span>
+        <label asp-for="Username">Username</label>
+        <input asp-for="Username">
+        <span style="color:red;" asp-validation-for="Username"></span>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email">
+        <span style="color:red;" asp-validation-for="Email"></span>
+        <label asp-for="Passsword">Password</label>
+        <input asp-for="Passsword">
+        <span style="color:red;" asp-validation-for="Passsword"></span>
+        <label asp-for="ConfirmPassword">Confirm Password</label>
+        <input asp-for="ConfirmPassword">
+        <span style="color:red;" asp-validation-for="ConfirmPassword"></span>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+
+
+@section script{
+
+    <partial name="_ValidationScriptsPartial" />
+}

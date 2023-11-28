@@ -1,0 +1,35 @@
+﻿
+@model List<CategoryArchive>
+@{
+    ViewData["Title"] = "ArchiveCategories";
+}
+
+<div class="container">
+    <h1 class="text-center mt-3 mb-3">Category Archive</h1>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var category in Model)
+                {
+                    <tr>
+                        <td>
+                            @category.Name
+                        </td>
+                       
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+
+</div>

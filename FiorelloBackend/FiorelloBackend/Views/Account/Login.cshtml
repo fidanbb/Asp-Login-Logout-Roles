@@ -1,0 +1,89 @@
+﻿@model LoginVM
+
+@{
+    ViewData["Title"] = "Resgister";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: #f2f2f2;
+    }
+
+    .container-login {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+        margin: 0 auto;
+        width: 350px;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    label {
+        margin-top: 10px;
+    }
+
+    input {
+        padding: 6px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #45a049;
+        }
+</style>
+
+<div class="container-login mb-5">
+    <h2>User Login</h2>
+    <form class="login-form" method="post" asp-controller="Account" asp-action="Login">
+        <div style="color:red;" asp-validation-summary="All"></div>
+
+
+        <label asp-for="EmailOrUsername">Email or Username</label>
+        <input asp-for="EmailOrUsername">
+        <span style="color:red;" asp-validation-for="EmailOrUsername"></span>
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password">
+        <span style="color:red;" asp-validation-for="Password"></span>
+        <div class="custom-control custom-checkbox mb-2">
+
+            <input asp-for="RememberMe" type="checkbox" class="custom-control-input">
+            <label class="custom-control-label" asp-for="RememberMe">@Html.DisplayNameFor(m => m.RememberMe)</label>
+        </div>
+          
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+
+
+@section script{
+
+    <partial name="_ValidationScriptsPartial" />
+}
